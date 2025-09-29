@@ -1,0 +1,309 @@
+@media (max-width: 1280px) {
+  .top-header {
+    &__logo {
+      width: 48px;
+      height: auto;
+      &-slogan {
+        width: 160px;
+      }
+      &-link {
+        gap: 16px;
+      }
+    }
+    &__address-info {
+      gap: 16px;
+      &-item {
+        max-width: 270px;
+      }
+    }
+  }
+
+  .bottom-header {
+    &__nav {
+      gap: 16px;
+    }
+  }
+
+  .projects-section {
+    &__list {
+      gap: 16px;
+      &-item {
+        padding: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1096px) {
+  .bottom-header {
+    &__wrapper {
+      padding: 18px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    max-width: 820px;
+  }
+
+  .bottom-header,
+  .top-header__address-info {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+    margin: 0;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .stat-item {
+    @include fluid-font(320px, 1920px, 24px, 32px);
+  }
+
+  .promo-section {
+    background-position: bottom -121px right 0;
+    &__list {
+      gap: 16px;
+    }
+    &-card {
+      padding: 24px;
+    }
+  }
+
+  .projects-section {
+    background-color: $accentColor;
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .request-section {
+    margin-bottom: 48px;
+  }
+
+  .request-form {
+    padding: 32px;
+    &__custom-heckbox {
+      width: 18px;
+      height: 18px;
+    }
+    &__btn {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+
+  .footer {
+    padding: 48px 0;
+    &__top {
+      &-address-info {
+        margin: 0;
+      }
+    }
+    &-form {
+      justify-content: space-between;
+      &__input {
+        max-width: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 24px;
+  }
+
+  .wrapper {
+    padding: 0px 32px;
+  }
+
+  .top-header {
+    &__logo {
+      width: 32px;
+      &-link {
+        gap: 12px;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .promo-section {
+    &__top {
+    }
+  }
+
+  .news-section {
+  }
+
+  .projects-section {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      &-item {
+        min-height: 164px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .wrapper {
+  }
+
+  .promo-section {
+    &__top {
+      flex-direction: column;
+      gap: 48px;
+      &-heading {
+        text-align: center;
+      }
+    }
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-card {
+      min-height: 210px;
+      &__heading {
+        font-size: 14px;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  .news-section {
+    &__content {
+      gap: 16px;
+    }
+  }
+  .request-section {
+    &__wrapper {
+      gap: 16px;
+    }
+  }
+  .footer__top-address-info {
+    gap: 32px;
+  }
+
+  .footer-form__input {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 645px) {
+  .promo-section {
+    background-position: bottom 0 right -400px;
+    &__top {
+      margin-bottom: 48px;
+    }
+  }
+
+  .footer {
+    &__top {
+      &-wrapper {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+  }
+
+  .request-form {
+    &__input {
+      padding: 16px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    margin-top: 16px;
+  }
+
+  .top-header {
+    &__logo {
+      width: 48px;
+      height: 48px;
+      &-slogan {
+        display: none;
+      }
+    }
+  }
+
+  .promo-section {
+    &__top {
+      &-heading {
+        line-height: 1.3;
+      }
+    }
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .news-section {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__preview {
+      height: 263px;
+      padding: 18px;
+    }
+  }
+
+  .projects-section {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .request-section {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    &__heading {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .footer-form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    padding: 0px 16px;
+  }
+
+  .request-form {
+    padding: 16px;
+    &__input {
+      margin-bottom: 8px;
+    }
+    &__label {
+      gap: 2px;
+    }
+  }
+
+  .header {
+    padding: 0;
+  }
+  .mobile-menu {
+    max-width: 280px;
+  }
+  .footer__top-address-info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer__top-address-info-item-heading {
+    margin-bottom: 16px;
+  }
+}

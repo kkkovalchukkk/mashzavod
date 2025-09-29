@@ -4,6 +4,12 @@ body {
   min-height: 100%;
 }
 
+html.no-scroll,
+body.no-scroll {
+  position: relative;
+  overflow: hidden;
+}
+
 body {
   min-width: 320px;
   max-width: 1920px;
@@ -59,4 +65,11 @@ p,
   @include fluid-font(320px, 1920px, 16px, 20px);
   line-height: 128%;
   color: $blackColor;
+}
+
+@media (max-width: 1023px) {
+  h1,
+  .heading {
+    @include fluid-font(320px, 1920px, 24px, 32px);
+  }
 }

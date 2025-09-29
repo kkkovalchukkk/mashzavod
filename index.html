@@ -9,6 +9,55 @@
   </head>
   <body>
     <div class="page">
+      <div class="overlay">
+        <div class="mobile-menu">
+          <nav class="mobile-menu__nav">
+            <a href="#" class="mobile-menu__nav-link">О нас</a>
+            <a href="#" class="mobile-menu__nav-link">Проекты</a>
+            <a href="#" class="mobile-menu__nav-link">Услуги</a>
+            <a href="#" class="mobile-menu__nav-link">
+              Каталог модульных зданий
+            </a>
+            <a href="#" class="mobile-menu__nav-link">Производство</a>
+            <a href="#" class="mobile-menu__nav-link">Контакты</a>
+          </nav>
+
+          <a
+            href="./assets/files/test.pdf"
+            download
+            class="btn mobile-menu__btn"
+          >
+            Скачать презентацию
+          </a>
+
+          <div class="mobile-menu__info-list">
+            <div class="mobile-menu__info-list-item">
+              <p class="mobile-menu__info-list-item-heading">адрес</p>
+              <p class="mobile-menu__info-list-item-text">
+                г. Москва, ул. Рочдельская, 15, стр. 17-18
+              </p>
+            </div>
+            <div class="mobile-menu__info-list-item">
+              <p class="mobile-menu__info-list-item-heading">телефон</p>
+              <a
+                href="tel:+78002010700"
+                class="mobile-menu__info-list-item-text"
+              >
+                8 (800) 201-07-00
+              </a>
+            </div>
+            <div class="mobile-menu__info-list-item">
+              <p class="mobile-menu__info-list-item-heading">e-mail</p>
+              <a
+                href="mailto:info@rm-modul.ru"
+                class="mobile-menu__info-list-item-text"
+              >
+                info@rm-modul.ru
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <header class="header">
         <div class="top-header">
           <div class="wrapper top-header__wrapper">
@@ -54,6 +103,7 @@
                 </address>
               </div>
             </div>
+            <div class="header__burger"></div>
           </div>
         </div>
         <div class="bottom-header">
@@ -361,6 +411,46 @@
     <script src="https://unpkg.com/imask"></script>
     <script src="./scripts/counter.js"></script>
     <script>
+      const headerBurgerEl = document.querySelector(".header__burger");
+      const overlayEl = document.querySelector(".overlay");
+
+      function showMobileMenu() {
+        overlayEl.classList.add("overlay_active");
+      }
+      function hideMobileMenu() {
+        overlayEl.classList.remove("overlay_active");
+      }
+
+      function offScroll() {
+        document.querySelector("html").classList.add("no-scroll");
+        document.body.classList.add("no-scroll");
+      }
+
+      function onScroll() {
+        document.querySelector("html").classList.remove("no-scroll");
+        document.body.classList.remove("no-scroll");
+      }
+
+      headerBurgerEl.addEventListener("click", () => {
+        if (headerBurgerEl.classList.contains("header__burger_active")) {
+          headerBurgerEl.classList.remove("header__burger_active");
+          onScroll();
+          hideMobileMenu();
+        } else {
+          offScroll();
+          showMobileMenu();
+          headerBurgerEl.classList.add("header__burger_active");
+        }
+      });
+
+      overlayEl.addEventListener("click", (e) => {
+        if (e.target === overlayEl) {
+          onScroll();
+          hideMobileMenu();
+          headerBurgerEl.classList.remove("header__burger_active");
+        }
+      });
+
       const element = document.getElementById("tel-input");
       const maskOptions = {
         mask: "+{7} (000) 000-00-00",
