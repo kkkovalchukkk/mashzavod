@@ -1,0 +1,167 @@
+@media (max-width: 1320px) {
+  .technology-section {
+    &__tab {
+      &-page {
+        padding: 16px;
+        &-content {
+          gap: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .technology-section {
+    &__content {
+      gap: 16px;
+    }
+  }
+
+  .subservices-section {
+    &__bg {
+      width: 60%;
+      top: -40%;
+    }
+    &__heading {
+      max-width: 640px;
+    }
+  }
+
+  .dec-section__list {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1196px) {
+  .technology-section {
+    &__content {
+      flex-direction: column;
+    }
+    &__tab-pages {
+      max-width: unset;
+    }
+    &__tabs {
+      max-width: unset;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+
+      &-btn {
+        border-right: 1px solid $accentColor;
+        border-radius: 0;
+        &.active {
+          border-radius: 0;
+        }
+        &:last-child {
+          border-bottom: 1px solid $accentColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .technology-section {
+    &__tabs {
+      grid-template-columns: 1fr;
+      &-btn {
+        border-right: 1px solid $accentColor;
+        border-left: 1px solid $accentColor;
+        &:last-child {
+          border-left: 1px solid $accentColor;
+          border-right: 1px solid $accentColor;
+        }
+      }
+    }
+  }
+
+  .dec-section {
+    &__list {
+      &-item {
+        padding: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info-services-section {
+    &__content {
+      &-top {
+        flex-direction: column;
+      }
+      &-btn {
+        width: 100%;
+      }
+    }
+  }
+  .subservices-section {
+    &__bg {
+      top: -10%;
+    }
+  }
+
+  .dec-section {
+    &__list {
+      grid-template-columns: 1fr;
+      &-item {
+        min-height: 240px;
+      }
+    }
+  }
+
+  .technology-section {
+    &__text {
+      margin-bottom: 24px;
+    }
+    &__tab {
+      &-page {
+        &-preview {
+          max-width: unset;
+        }
+        &-content {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  .subservices-section__bg {
+    top: 20%;
+    width: 40%;
+  }
+  .subsection-top {
+    flex-direction: column;
+    gap: 32px;
+    &__slides-navigation {
+      display: none;
+    }
+  }
+
+  .review-card {
+    padding: 24px;
+    height: auto;
+    min-height: 320px;
+  }
+  .technology-section__tab-page-bottom {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .dec-section,
+  .reviews-section__swiper {
+    margin-bottom: 160px;
+  }
+  .info-services-section__content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 525px) {
+  .subservices-section__bg {
+    top: 28%;
+    width: 40%;
+  }
+}

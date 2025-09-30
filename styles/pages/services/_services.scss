@@ -95,7 +95,7 @@
     max-width: 860px;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 30px;
+    @include fluid-font(320px, 1920px, 14px, 30px);
     line-height: 128%;
     color: #000;
   }
@@ -318,6 +318,7 @@
     position: relative;
     width: 100%;
     max-width: 894px;
+    min-height: 647px;
   }
 
   &__tab-page {
@@ -377,10 +378,9 @@
   }
 
   &__tab-page-category-link {
-    padding: 2px 16px;
+    padding: 6px 16px;
     font-weight: 400;
     @include fluid-font(320px, 1920px, 12px, 18px);
-    line-height: 128%;
     color: $accentColor;
     border: 1px solid $accentColor;
     border-radius: 14px;
