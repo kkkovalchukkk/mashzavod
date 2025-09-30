@@ -92,8 +92,8 @@ p,
   margin-bottom: 76px;
   display: flex;
   align-items: center;
-  gap: 69px;
   flex-wrap: wrap;
+  gap: 16px;
   &__link {
     position: relative;
     font-weight: 400;
@@ -101,21 +101,18 @@ p,
     line-height: 128%;
     letter-spacing: 0%;
     color: $blackColor;
-    &::after {
-      content: "";
-      width: 29.5px;
-      height: 10px;
-      background-image: url("../assets/icons/breadcrumb-icon.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      top: 0;
-      margin: auto;
-      right: -21px - 29.5px;
-      bottom: 0;
-    }
+    background-image: url("../assets/icons/breadcrumb-icon.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 21px + 29.5px;
+
     &_active {
       color: $accentColor;
+      background-image: url("../assets/icons/active-breadcrumb-icon.svg");
+    }
+    &:first-child {
+      padding: 0;
+      background: none;
       &::after {
         display: none;
       }
@@ -125,6 +122,40 @@ p,
 
 .swiper-button-disabled {
   opacity: 0.5;
+}
+
+.select2-container--default {
+  width: auto !important;
+  .select2-selection--single {
+    border-radius: 15px;
+    width: 339px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0 0 40px -1px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    background-image: url("../assets/icons/select-icon.svg");
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+  }
+
+  .select2-selection__rendered {
+    font-family: $mainFont;
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 14px, 20px);
+    line-height: 149%;
+    color: #000 !important;
+  }
+
+  &.select2-container--open {
+    .select2-selection--single {
+      background-image: url("../assets/icons/select-icon-opened.svg");
+    }
+  }
+  .select2-dropdown {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1023px) {
