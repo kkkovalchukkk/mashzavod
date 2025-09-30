@@ -1,0 +1,53 @@
+@media (max-width: 1360px) {
+  .detail-section__content {
+    gap: 32px;
+  }
+  .detail-section__info-box-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1240px) {
+  .detail-section__content {
+    flex-direction: column;
+  }
+
+  .detail-section__swiper-holder,
+  .detail-section__info {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 625px) {
+  .mySwiper2 {
+    height: 320px;
+  }
+  .detail-section__field {
+    padding: 24px;
+  }
+  .detail-section__btn {
+    padding: 16px;
+  }
+
+  .detail-section__category-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .detail-section__category-list-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .detail-section__swiper-btn {
+    top: 120px;
+  }
+
+  .detail-section__swiper-right {
+    right: 16px;
+  }
+  .detail-section__swiper-left {
+    left: 16px;
+  }
+}

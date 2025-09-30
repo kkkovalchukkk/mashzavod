@@ -1,0 +1,224 @@
+.detail-section {
+  margin-bottom: 112px;
+  &__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 81px;
+  }
+
+  &__swiper-holder {
+    position: relative;
+    width: 100%;
+    max-width: 828px;
+  }
+
+  &__swiper-btn {
+    border-radius: 5px;
+    width: 48px;
+    height: 54px;
+    background-color: $whiteColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    @include click;
+  }
+  &__swiper-left {
+    left: 41px;
+    top: 207px;
+  }
+  &__swiper-right {
+    right: 41px;
+    top: 207px;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 524px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__info-box {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 40px -1px rgba(0, 0, 0, 0.1);
+    background: $whiteColor;
+    padding-top: 42px;
+    padding-right: 65px;
+    padding-bottom: 69px;
+    padding-left: 67px;
+    margin-bottom: 53px;
+  }
+
+  &__info-box-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 36px;
+  }
+
+  &__info-box-row-heading {
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 14px, 18px);
+    line-height: 149%;
+    color: $blackColor;
+  }
+
+  &__info-box-row-text {
+    padding: 10px 45px;
+    border: 1px solid $accentColor;
+    border-radius: 30px;
+
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 14px, 18px);
+    line-height: 149%;
+    color: $accentColor;
+  }
+
+  &__info-table {
+    width: 100%;
+  }
+
+  &__info-table-heading {
+    width: 100%;
+    margin-bottom: 32px;
+    text-align: left;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $accentColor;
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 14px, 18px);
+    line-height: 149%;
+    color: $accentColor;
+  }
+
+  &__info-table-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 18px;
+  }
+
+  &__info-table-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  &__info-table-row-heading {
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 12px, 16px);
+    line-height: 149%;
+    color: $blackColor;
+  }
+
+  &__info-table-row-value {
+    @extend .detail-section__info-table-row-heading;
+    color: $accentColor;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 28.5px;
+    font-weight: 500;
+    @include fluid-font(320px, 1920px, 12px, 20px);
+    line-height: 128%;
+    text-align: center;
+    color: $blackColor;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 11px rgba(0, 0, 0, 0.1);
+    background: $accentColor;
+    border: 1px solid $accentColor;
+
+    @include click;
+    &:hover {
+      background-color: transparent;
+      color: $accentColor;
+    }
+  }
+
+  &__category-list {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 41px;
+    margin-top: 79px;
+  }
+
+  &__category-list-link {
+    padding: 12px 53px;
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 12px, 20px);
+    line-height: 149%;
+    color: $blackColor;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 40px -1px rgba(0, 0, 0, 0.1);
+    background: #fff;
+
+    @include click;
+    &_active {
+      background-color: $accentColor;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    border: 2px solid $accentColor;
+    border-radius: 25px;
+    padding: 66px 111px 72px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    p {
+      margin-bottom: 24px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.mySwiper2 {
+  width: 100%;
+  margin-bottom: 34px;
+  img {
+    width: 100%;
+    height: 468px;
+    object-fit: cover;
+  }
+}
+
+.mySwiper {
+  width: 100%;
+  height: 65px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+@import "./media";
