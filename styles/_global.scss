@@ -67,6 +67,62 @@ p,
   color: $blackColor;
 }
 
+.section-heading {
+  margin-bottom: 30px;
+  font-weight: 700;
+  @include fluid-font(320px, 1920px, 18px, 35px);
+  line-height: 128%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.section-subheading {
+  margin-bottom: 49px;
+  font-weight: 400;
+  @include fluid-font(320px, 1920px, 18px, 35px);
+  color: $blackColor;
+  line-height: 128%;
+  letter-spacing: 0%;
+  padding-left: 21px;
+  border-left: 9px solid $accentColor;
+  text-transform: unset;
+}
+
+.breadcrumbs {
+  margin-bottom: 76px;
+  display: flex;
+  align-items: center;
+  gap: 69px;
+  flex-wrap: wrap;
+  &__link {
+    position: relative;
+    font-weight: 400;
+    @include fluid-font(320px, 1920px, 12px, 20px);
+    line-height: 128%;
+    letter-spacing: 0%;
+    color: $blackColor;
+    &::after {
+      content: "";
+      width: 29.5px;
+      height: 10px;
+      background-image: url("../assets/icons/breadcrumb-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      margin: auto;
+      right: -21px - 29.5px;
+      bottom: 0;
+    }
+    &_active {
+      color: $accentColor;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 1023px) {
   h1,
   .heading {

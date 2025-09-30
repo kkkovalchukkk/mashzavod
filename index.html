@@ -410,52 +410,7 @@
     </div>
     <script src="https://unpkg.com/imask"></script>
     <script src="./scripts/counter.js"></script>
-    <script>
-      const headerBurgerEl = document.querySelector(".header__burger");
-      const overlayEl = document.querySelector(".overlay");
-
-      function showMobileMenu() {
-        overlayEl.classList.add("overlay_active");
-      }
-      function hideMobileMenu() {
-        overlayEl.classList.remove("overlay_active");
-      }
-
-      function offScroll() {
-        document.querySelector("html").classList.add("no-scroll");
-        document.body.classList.add("no-scroll");
-      }
-
-      function onScroll() {
-        document.querySelector("html").classList.remove("no-scroll");
-        document.body.classList.remove("no-scroll");
-      }
-
-      headerBurgerEl.addEventListener("click", () => {
-        if (headerBurgerEl.classList.contains("header__burger_active")) {
-          headerBurgerEl.classList.remove("header__burger_active");
-          onScroll();
-          hideMobileMenu();
-        } else {
-          offScroll();
-          showMobileMenu();
-          headerBurgerEl.classList.add("header__burger_active");
-        }
-      });
-
-      overlayEl.addEventListener("click", (e) => {
-        if (e.target === overlayEl) {
-          onScroll();
-          hideMobileMenu();
-          headerBurgerEl.classList.remove("header__burger_active");
-        }
-      });
-
-      const element = document.getElementById("tel-input");
-      const maskOptions = {
-        mask: "+{7} (000) 000-00-00",
-      };
-      const mask = IMask(element, maskOptions);
-    </script>
+    <script src="./scripts/burger.js"></script>
+    <script src="./scripts/phoneMask.js"></script>
   </body>
 </html>

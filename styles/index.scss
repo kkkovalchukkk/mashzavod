@@ -4,5 +4,10 @@
 @import "./fonts";
 @import "./reset";
 @import "./global";
+
+// main page
 @import "./styles";
 @import "./media";
+
+// projects page
+@import "./pages/projects/projects";
