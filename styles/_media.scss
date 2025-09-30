@@ -43,6 +43,18 @@
 }
 
 @media (max-width: 1023px) {
+  .top-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: $whiteColor;
+    padding: 16px 0;
+    &__wrapper {
+      padding: 0px 16px;
+    }
+  }
+
   .wrapper {
     max-width: 820px;
   }
@@ -224,8 +236,8 @@
 
   .top-header {
     &__logo {
-      width: 48px;
-      height: 48px;
+      // width: 48px;
+      // height: 48px;
       &-slogan {
         display: none;
       }

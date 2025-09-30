@@ -153,6 +153,7 @@
   width: 40px;
   height: 26px;
   margin: 30px auto;
+  z-index: 999;
   &_active {
     &::after {
       background-color: $whiteColor;
@@ -691,6 +692,8 @@
 
 .overlay {
   position: fixed;
+  z-index: 3;
+
   left: 0;
   top: 0;
   width: 100%;
@@ -704,6 +707,12 @@
     visibility: visible;
     .mobile-menu {
       transform: translateX(0%);
+    }
+    & + .header .top-header {
+      background-color: $blackColor;
+    }
+    & + .header .top-header__logo-slogan {
+      filter: invert(1);
     }
   }
 }
